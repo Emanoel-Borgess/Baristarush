@@ -1121,6 +1121,21 @@ button:disabled {
     filter: drop-shadow(0 9px 5px rgba(71, 40, 20, 0.28));
 }
 
+.table-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.table-wrapper .table-image {
+    width: 155px;
+    max-height: 175px;
+}
+
+.table-wrapper .seated-customer {
+    bottom: 47px;
+    right: 6px;
+}
+
 .customer-layer {
     position: absolute;
     inset: 0;
@@ -1129,10 +1144,15 @@ button:disabled {
     pointer-events: none;
 }
 
+img[src*="crianca.png"],
+img[src*="criança.png"] {
+    transform: scaleX(-1);
+}
+
 .seated-customer {
     position: absolute;
     right: 6%;
-    bottom: 24px;
+    bottom: -100px;
 
     width: 74px;
     max-height: 155px;
@@ -1144,9 +1164,10 @@ button:disabled {
     filter: drop-shadow(0 7px 4px rgba(50, 28, 14, 0.24));
 }
 
-.table-slot:nth-child(2n) .seated-customer {
+.table-slot:nth-child(2n) .table-wrapper .seated-customer {
     right: auto;
-    left: 5%;
+    left: 90px;
+    bottom: 60px;
 }
 
 .order-bubble {
